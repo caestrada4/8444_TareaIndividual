@@ -178,55 +178,33 @@
             <p class="lh-lg">
               Utilizacion de AJAX
             </p>
-            <script type="text/javascript" src="/js/jquery.js"></script>
- 
+            <p>Start typing a name in the input field below:</p>
+            <p>Suggestions: <span id="txtHint"></span></p>
+            
+            <form>
+            First name: <input type="text" onkeyup="showHint(this.value)">
+            </form>
+            
             <script>
-            function realizaProceso(valorCaja1, valorCaja2){
-                    var parametros = {
-                            "valorCaja1" : valorCaja1,
-                            "valorCaja2" : valorCaja2
-                    };
-                    $.ajax({
-                            data:  parametros,
-                            url:   'ejemplo_ajax_proceso.php',
-                            type:  'post',
-                            beforeSend: function () {
-                                    $("#resultado").html("Procesando, espere por favor...");
-                            },
-                            success:  function (response) {
-                                    $("#resultado").html(response);
-                            }
-                    });
+            function showHint(str) {
+              if (str.length == 0) {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+              } else {
+                const xmlhttp = new XMLHttpRequest();
+                xmlhttp.onload = function() {
+                  document.getElementById("txtHint").innerHTML = this.responseText;
+                }
+              xmlhttp.open("GET", "gethint.php?q=" + str);
+              xmlhttp.send();
+              }
             }
             </script>
-             
-            </head>
-             
-            <body>
-             
-            Introduce valor 1
-             
-            <input type="text" name="caja_texto" id="valor1" value="0"/> 
-             
-             
-            Introduce valor 2
-             
-            <input type="text" name="caja_texto" id="valor2" value="0"/>
-             
-            Realiza suma
-             
-            <input type="button" href="javascript:;" onclick="realizaProceso($('#valor1').val(), $('#valor2').val());return false;" value="Calcula"/>
-             
-            <br/>
-             
-            Resultado: <span id="resultado">0</span>
-             
-            </body>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
           <div class="services__pic">
-            <img src="images/services/service-3.png" alt="cloud hosting illustration" class="img-fluid"
+            <img src="images/services/descarga.jpg" alt="cloud hosting illustration" class="img-fluid"
               style="width: 100%; height: 100%;">
           </div>
         </div>
