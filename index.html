@@ -32,7 +32,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#hideshow">XML TEST</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hideshow">XML</a></li>
           <li class="nav-item"><a class="nav-link" href="#fade">JSON</a></li>
           <li class="nav-item"><a class="nav-link" href="#slide">AJAX</a></li>
           <li class="nav-item"><a class="nav-link" href="#Animation">XML VS JSON</a></li>
@@ -133,23 +133,31 @@
               <h3 class="display-3--title mt-1">JSON</h3>
               <p class="lh-lg">
                 JSON es un formato de texto sencillo para el intercambio de datos. Se trata de un subconjunto de la notación literal de objetos de JavaScript, aunque, debido a su amplia adopción como alternativa a XML, se considera un formato independiente del lenguaje.              </p>
-              <script>
-                const JSONData = {
-                    "key1": "value1",
-                    "key2": "value2",
-                    "key3": "value3",
-                    "key4": 7,
-                    "key5": null,
-                    "favFriends": ["Kolade", "Nithya", "Dammy", "Jack"],
-                    "favPlayers": {"one": "Kante", "two": "Hazard", "three": "Didier"}
-                }
+                <body>
+                  <section id="tests">
+                    <h1>Datos Obtenidos de un formato JSON</h1>
+                    <div id="content" >
+                
+                    </div>
+                    <div id="content2" >
+                      
+                    </div>
+                  </section>
+                  <script type="text/javascript">
+                
+                  var objetos = {"Personas":[
+                      {"nombre":"Jorge","edad":23},
+                      {"nombre":"Carlos","edad":17}
+                    ]};
+                
+                    document.getElementById('content').innerHTML = objetos.Personas[0].nombre ;
 
-                const JSONString = JSON.stringify(JSONData)
-                const JSONDisplay = document.querySelector("#json")
-                JSONDisplay.innerHTML = JSONString
-              </script>
-              <h2>Aquí están los datos del JSON:</h2> 
-              <div id="json"></div>
+                    document.getElementById('content2').innerHTML = objetos.Personas[1].edad ;
+                  /*Declarar un objeto JSON con una funcion en un atributo
+                   notese el uso de "this" que hace referencia a el objeto en sí, es decir a persona*/
+
+                  </script>
+                </body>	
             </div>
           </div>
         </div>
