@@ -178,33 +178,38 @@
             <p class="lh-lg">
               Utilizacion de AJAX
             </p>
-            <p>Start typing a name in the input field below:</p>
-            <p>Suggestions: <span id="txtHint"></span></p>
-            
-            <form>
-            First name: <input type="text" onkeyup="showHint(this.value)">
-            </form>
+            <body>
+
+              <div id="demo">
+                <h2>
+                  AJAX permite que las páginas web se actualicen de forma asíncrona mediante el intercambio de datos con un servidor web en segundo plano. Esto significa que es posible actualizar partes de una página web sin recargar toda la página.
+                </h2>
+
+                <h2>
+                  Para poder utilizarlo es necesario activar las CORS POLICY
+                </h2>
+                <button type="button" onclick="loadDoc()">Cambiar contenido</button>
+              </div>
+              
+            </body>
             
             <script>
-            function showHint(str) {
-              if (str.length == 0) {
-                document.getElementById("txtHint").innerHTML = "";
-                return;
-              } else {
-                const xmlhttp = new XMLHttpRequest();
-                xmlhttp.onload = function() {
-                  document.getElementById("txtHint").innerHTML = this.responseText;
+                function loadDoc() {
+                  var xhttp = new XMLHttpRequest();
+                  xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                    }
+                  };
+                  xhttp.open("GET", "ajax_info.txt", true);
+                  xhttp.send();
                 }
-              xmlhttp.open("GET", "gethint.php?q=" + str);
-              xmlhttp.send();
-              }
-            }
             </script>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
           <div class="services__pic">
-            <img src="images/services/descarga.jpg" alt="cloud hosting illustration" class="img-fluid"
+            <img src="descarga.jpg" alt="cloud hosting illustration" class="img-fluid"
               style="width: 100%; height: 100%;">
           </div>
         </div>
@@ -233,9 +238,56 @@
             <p class="lh-lg">
               JSON es un formato de intercambio de datos y solo proporciona una especificación de codificación de datos. XML es un lenguaje para especificar lenguajes de marcado personalizados y proporciona mucho más que el intercambio de datos. Con su semántica estricta, XML definió un estándar para afirmar la integridad de los datos de los documentos XML, de cualquier sublenguaje XML.
             </p>
-            <a href="./pages/animate/index.html"><button type="button" class="rounded-pill btn-rounded border-primary">Leer más
-              <span><i class="fas fa-arrow-right"></i></span>
-            </button></a>
+
+            <div class="container">       
+              <table class="table table-bordered">
+
+                <thead>  
+                  <tr>  
+                    <th>SEMEJANZAS</th>  
+                    <th>DIFERENCIAS</th>  
+                  </tr>  
+                </thead>  
+                <tbody>  
+                  <tr>  
+                    <td>JSON y XML son formas populares de almacenar datos estructurados en un archivo o base de datos.</td>  
+                    <td>JSON se utiliza para almacenar y transmitir datos</td>  
+  
+                  </tr>  
+                  <tr>  
+                    <td>JSON y XML son ampliamente utilizados, por lo que son soportados por muchos lenguajes de programación.</td>  
+                    <td>XML se utiliza para representar datos de forma legible por la máquina</td>  
+  
+                  </tr>  
+                  <tr>  
+                    <td>puedes utilizarlos para pasar información de una aplicación o sistema a otro a través de un canal de comunicación como HTTP o SOAP</td>  
+                    <td>JSON es una forma ligera y legible para el ser humano de representar estructuras de datos</td>  
+  
+                  </tr>  
+                  <tr>  
+                    <td>Una de las similitudes más evidentes entre estas dos estructuras de datos es que JSON y XML están basadas en texto.</td>  
+                    <td>XML es una forma más larga de representar datos estructurados.</td>  
+  
+                  </tr>  
+                  <tr>  
+                    <td>En tercer lugar, ambos formatos tienen estructuras jerárquicas en las que cada campo tiene su nombre y valor separados por comas.</td>  
+                    <td>XML se utiliza para representar datos de forma legible por la máquina</td>  
+  
+                  </tr>  
+                  <tr>  
+                    <td>JSON y XML pueden utilizarse para la serialización de datos</td>  
+                    <td>JSON utiliza menos memoria que el programa XML a la hora de procesar la información.</td>  
+  
+                  </tr>  
+                  <tr>  
+                    <td>Puedes utilizar una biblioteca serializadora XML para convertir tu documento JSON en un archivo XML, de la misma manera que podrías escribir una página HTML utilizando la etiqueta o crear imágenes.</td>  
+                    <td>JSON puede utilizarse con archivos JavaScript o de texto plano, mientras que XML sólo puede almacenarse como archivo de texto.</td>  
+  
+                  </tr>      
+                </tbody>  
+              </table>
+            </div>
+            
           </div>
         </div>
       </div>
