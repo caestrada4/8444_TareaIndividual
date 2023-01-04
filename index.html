@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JQuery Efectos</title>
+  <title>Tarea Individual Andres Estrada</title>
   <link href="images/favicon.ico" rel="icon">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/fontawesome.css">
@@ -22,9 +22,9 @@
 /////////////////////////////////////////////////////////////////////////////////////////////-->
   <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="https://jquery-8444.000webhostapp.com/">
+      <!-- <a class="navbar-brand" href="https://jquery-8444.000webhostapp.com/">
         <img src="images/logo.png" alt="logo image">
-      </a>
+      </a> -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -32,13 +32,11 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#hideshow">Hide/Show</a></li>
-          <li class="nav-item"><a class="nav-link" href="#fade">Fade</a></li>
-          <li class="nav-item"><a class="nav-link" href="#slide">Slide</a></li>
-          <li class="nav-item"><a class="nav-link" href="#Animation">Animation</a></li>
-          <li class="nav-item"><a class="nav-link" href="#Stop">Stop</a></li>
-          <li class="nav-item"><a class="nav-link" href="#Callback">Callback</a></li>
-          <li class="nav-item"><a class="nav-link" href="#Chaining">Chaining</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hideshow">XML</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fade">JSON</a></li>
+          <li class="nav-item"><a class="nav-link" href="#slide">AJAX</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Animation">XML VS JSON</a></li>
+
 
         </ul>
       </div>
@@ -55,11 +53,9 @@
         <!-- START THE CONTENT FOR THE INTRO  -->
         <div class="col-md-6 intros text-start">
           <h1 class="display-2">
-            <span class="display-2--intro">jQuery ! Efectos</span>
+            <span class="display-2--intro">JSON-AJAX-XML</span>
             <span class="display-2--description lh-base">
-              Con jQuery, agregar efectos a una página es muy fácil. Estos efectos poseen una configuración
-              predeterminada pero también es posible proveerles parámetros personalizados. Además es posible crear
-              animaciones particulares estableciendo valores de propiedades CSS.
+              AJAX significa JavaScript asíncrono y XML (Asynchronous JavaScript and XML). Es un conjunto de técnicas de desarrollo web que permiten que las aplicaciones web funcionen de forma asíncrona, procesando cualquier solicitud al servidor en segundo plano.
             </span>
           </h1>
         </div>
@@ -67,7 +63,7 @@
         <br>
         <div class="col-md-6 intros text-end">
           <div class="video-box">
-            <img src="images/arts/intro-section-illustration.png" alt="video illutration" class="img-fluid">
+            <img src="images/arts/jsonvsxml.png" alt="video illutration" class="img-fluid">
             <a href="#" class="glightbox position-absolute top-50 start-50 translate-middle">
               <span>
                 <i class="fas fa-play-circle"></i>
@@ -96,29 +92,22 @@
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
           <div class="services__content">
             <div class="icon d-block fas fa-cloud-upload-alt"></div>
-            <h3 class="display-3--title mt-1">jQuery - Hide/Show</h3>
+            <h3 class="display-3--title mt-1">XML</h3>
             <p class="lh-lg">
-              Se usan para mostrar y ocultar elementos del DOM de la web, mayoritariamente suelen ser divs, ids, clases, imágenes, elementos de formularios, etiquetas…
-            </p>
+              El lenguaje de marcado extensible (XML) es un lenguaje de marcado que proporciona reglas para definir cualquier dato. A diferencia de otros lenguajes de programación, XML no puede realizar operaciones de computación por sí mismo.            </p>
 
-            <p>
-              El uso combinado de estas 2 funciones de jQuery emula la funcionalidad básica de jQuery toggle() que
-              muestra y oculta elementos. Otros funciones de efectos básicos son:
-            </p>
-
-            <ul>
-              <li>slideDown(), slideUp() y slideToggle()</li>
-              <li>fadeIn(), fadeOut() y fadeTo()</li>
-              <li>animate() y css().</li>
-            </ul>
-            <a type="button" class="rounded-pill btn-rounded border-primary" href="pages/hide-show/index.html">Leer Más
-              <span><i class="fas fa-arrow-right"></i></span>
-            </a>
           </div>
+          <xml id="artículo">   
+            <artículo>   
+              <título>Insertar contenido XML en una página HTML</título>   
+              <texto>Es posible insertar contenido XML en una página HTML  
+            con la etiqueta XML como esta escrito el códido siguiente (Inspeccionar para verificar) </texto>   
+            </artículo>   
+            </xml>   
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
           <div class="services__pic">
-            <img src="images/services/service-1.png" alt="marketing illustration" class="img-fluid">
+            <img src="images/services/html-xml-logo.png" alt="marketing illustration" class="img-fluid">
           </div>
         </div>
       </div>
@@ -141,19 +130,26 @@
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
             <div class="services__content">
               <div class="icon d-block fas fa-cloud-upload-alt"></div>
-              <h3 class="display-3--title mt-1">jQuery - Fade</h3>
+              <h3 class="display-3--title mt-1">JSON</h3>
               <p class="lh-lg">
-              Efecto de jQuery ‘fading’, este efecto de transiciones consta de 4 funciones:
-              </p>
-              <ul>
-                <li>fadeIn()</li>
-                <li>fadeOut()</li>
-                <li>fadeToggle()</li>
-                <li>fadeTo()</li>
-              </ul>
-              <a type="button" class="rounded-pill btn-rounded border-primary" href="pages/fade/index.html">Leer Más
-                <span><i class="fas fa-arrow-right"></i></span>
-              </a>
+                JSON es un formato de texto sencillo para el intercambio de datos. Se trata de un subconjunto de la notación literal de objetos de JavaScript, aunque, debido a su amplia adopción como alternativa a XML, se considera un formato independiente del lenguaje.              </p>
+              <script>
+                const JSONData = {
+                    "key1": "value1",
+                    "key2": "value2",
+                    "key3": "value3",
+                    "key4": 7,
+                    "key5": null,
+                    "favFriends": ["Kolade", "Nithya", "Dammy", "Jack"],
+                    "favPlayers": {"one": "Kante", "two": "Hazard", "three": "Didier"}
+                }
+
+                const JSONString = JSON.stringify(JSONData)
+                const JSONDisplay = document.querySelector("#json")
+                JSONDisplay.innerHTML = JSONString
+              </script>
+              <h2>Aquí están los datos del JSON:</h2> 
+              <div id="json"></div>
             </div>
           </div>
         </div>
@@ -170,18 +166,54 @@
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
           <div class="services__content">
             <div class="icon d-block fas fa-cloud-upload-alt"></div>
-            <h3 class="display-3--title mt-1">jQuery - Slide</h3>
+            <h3 class="display-3--title mt-1">AJAX</h3>
             <p class="lh-lg">
-              Efecto de jQuery sliding, este efecto de transiciones consta de 3 funciones:
+              Utilizacion de AJAX
             </p>
-            <ul>
-                <li>slideDown()</li>
-                <li>slideUp()</li>
-                <li>slideToggle()</li>
-              </ul>
-            <a type="button" class="rounded-pill btn-rounded border-primary"  href="pages/slide/index.html">Leer Más
-              <span><i class="fas fa-arrow-right"></i></span>
-            </a>
+            <script type="text/javascript" src="/js/jquery.js"></script>
+ 
+            <script>
+            function realizaProceso(valorCaja1, valorCaja2){
+                    var parametros = {
+                            "valorCaja1" : valorCaja1,
+                            "valorCaja2" : valorCaja2
+                    };
+                    $.ajax({
+                            data:  parametros,
+                            url:   'ejemplo_ajax_proceso.php',
+                            type:  'post',
+                            beforeSend: function () {
+                                    $("#resultado").html("Procesando, espere por favor...");
+                            },
+                            success:  function (response) {
+                                    $("#resultado").html(response);
+                            }
+                    });
+            }
+            </script>
+             
+            </head>
+             
+            <body>
+             
+            Introduce valor 1
+             
+            <input type="text" name="caja_texto" id="valor1" value="0"/> 
+             
+             
+            Introduce valor 2
+             
+            <input type="text" name="caja_texto" id="valor2" value="0"/>
+             
+            Realiza suma
+             
+            <input type="button" href="javascript:;" onclick="realizaProceso($('#valor1').val(), $('#valor2').val());return false;" value="Calcula"/>
+             
+            <br/>
+             
+            Resultado: <span id="resultado">0</span>
+             
+            </body>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
@@ -211,10 +243,9 @@
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
           <div class="services__content">
             <div class="icon d-block fas fa-code"></div>
-            <h3 class="display-3--title mt-1">Efectos jQuery - Animación</h3>
+            <h3 class="display-3--title mt-1">JSON VS XML</h3>
             <p class="lh-lg">
-              Con jQuery animate() podemos hacer efectos de animación modificando las propiedades CSS en tiempo real en
-              los elementos del DOM de nuestra web.
+              JSON es un formato de intercambio de datos y solo proporciona una especificación de codificación de datos. XML es un lenguaje para especificar lenguajes de marcado personalizados y proporciona mucho más que el intercambio de datos. Con su semántica estricta, XML definió un estándar para afirmar la integridad de los datos de los documentos XML, de cualquier sublenguaje XML.
             </p>
             <a href="./pages/animate/index.html"><button type="button" class="rounded-pill btn-rounded border-primary">Leer más
               <span><i class="fas fa-arrow-right"></i></span>
@@ -227,114 +258,7 @@
 
 
 
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////
-                             START SECTION 7 - DETENER  
-/////////////////////////////////////////////////////////////////////////////////////////////////////-->
-  <section id="Stop" class="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
-          <div class="services__content">
-            <div class="icon d-block fas fa-code"></div>
-            <h3 class="display-3--title mt-1">jQuery detener animaciones</h3>
-            <p class="lh-lg">
-              jQuery stop() tiene por funcionalidad detener las funciones o efectos que se estén ejecutando antes de que
-              finalicen
-            </p>
-            <a href="./pages/stop/index.html"><button type="button" class="rounded-pill btn-rounded border-primary">Leer más
-              <span><i class="fas fa-arrow-right"></i></span>
-            </button></a>
-          </div>
 
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-          <div class="services__pic">
-            <center><img src="images/services/Stop.png" style="width: 50%; height: auto;"
-                alt="web development illustration" class="img-fluid"></center>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- /////////////////////////////////////////////////////////////////////////////////////////////////
-                     START SECTION 8 - DEVOLUCION 
-//////////////////////////////////////////////////////////////////////////////////////////////////////-->
-  <section id="Callback" class="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-          <div class="services__pic">
-            <img src="images/services/call.jpg" alt="cloud hosting illustration" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
-          <div class="services__content">
-            <div class="icon d-block fas fa-code"></div>
-            <h3 class="display-3--title mt-1">Funciones de devolución de llamada de jQuery</h3>
-            <p class="lh-lg">
-              Una función de devolución de llamada se ejecuta después de que el efecto terminado la actual 100%.
-            </p>
-            <a href="./pages/callback/index.html"><button type="button" class="rounded-pill btn-rounded border-primary">Leer más
-              <span><i class="fas fa-arrow-right"></i></span>
-            </button></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-<!-- ////////////////////////////////////////////////////////////////////////////////////////////////
-                          START SECTION 9 - ENCADENAMIENTO  
-/////////////////////////////////////////////////////////////////////////////////////////////////////-->
-
-  <section id="Chaining" class="services">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-start">
-          <div class="services__content">
-            <div class="icon d-block fas fa-code"></div>
-            <h3 class="display-3--title mt-1">jQuery - Encadenamiento</h3>
-            <p class="lh-lg">
-              Con jQuery, puede encadenar acciones/métodos. <br> El encadenamiento nos permite ejecutar múltiples
-              métodos jQuery (en el mismo elemento) dentro de una sola declaración.
-            </p>
-            <a href="./pages/Chaining/index.html"><button type="button" class="rounded-pill btn-rounded border-primary">Leer más
-              <span><i class="fas fa-arrow-right"></i></span>
-            </button></a>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4">
-          <div class="services__pic">
-            <center><img src="images/services/enc.png" style="width: 100%; height: auto;"
-                alt="web development illustration" class="img-fluid"></center>
-          </div>
-        </div>
-      </div>
-  </section>
-
-  <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////
-    
-                           START SECTION 10 - THE FOOTER  
-///////////////////////////////////////////////////////////////////////////////////////////////-->
-  <footer class="footer">
-    <!-- START THE COPYRIGHT INFO  -->
-    <div class="footer-bottom pt-5 pb-5">
-      <div class="container">
-        <div class="row text-center text-white">
-          <div class="col-12">
-            <div class="footer-bottom__copyright">
-              &COPY; Copyright 2021 <a href="#">Company</a> | Created by <a href="http://codewithpatrick.com"
-                target="_blank">Muriungi</a><br><br>
-
-              Distributed by <a href="http://themewagon.com" target="_blank">ThemeWagon</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <!-- BACK TO TOP BUTTON  -->
   <a href="#" class="shadow btn-primary rounded-circle back-to-top">
@@ -346,7 +270,7 @@
   <script type="text/javascript">
     const lightbox = GLightbox({
       'touchNavigation': true,
-      'href': 'https://www.youtube.com/watch?v=neGu0AEXn4w',
+      'href': 'https://www.youtube.com/watch?v=cQnwAoW80r0',
       'type': 'video',
       'source': 'youtube', //vimeo, youtube or local
       'width': 900,
